@@ -1,12 +1,15 @@
 // Livoltek Design System - Component Exports
 // Este arquivo exporta todos os componentes do Design System
 
+// Import Button component
+import Button from './components/Button.vue'
+
 // Button Component
-export { default as Button } from './components/Button.vue'
+export { Button }
 
 // Re-export all components as default for easier importing
 export default {
-  Button
+  Button,
 }
 
 // Version info

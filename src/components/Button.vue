@@ -12,6 +12,11 @@
 <script setup>
 import { computed } from 'vue'
 
+// Define component name for multi-word requirement
+defineOptions({
+  name: 'ButtonComponent'
+})
+
 // Props
 const props = defineProps({
   label: {
