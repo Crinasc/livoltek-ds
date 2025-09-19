@@ -1,30 +1,30 @@
-/** @type { import('@storybook/vue3-vite').StorybookConfig } */
+/** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
-  stories: ['../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
-  addons: [],
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+  ],
   framework: {
-    name: '@storybook/vue3-vite',
+    name: '@storybook/react-vite',
     options: {},
   },
-  viteFinal: (config) => {
-    // Remove conflicting plugins that cause issues with Storybook
-    config.plugins = config.plugins?.filter((plugin) => {
-      const problematicPlugins = [
-        'vite-plugin-inspect',
-        'vite-plugin-vue-inspector',
-        'vite-plugin-vue-devtools'
-      ]
-      return !problematicPlugins.includes(plugin?.name)
-    })
-    
-    // Ensure proper Vue 3 configuration
-    config.define = {
-      ...config.define,
-      __VUE_OPTIONS_API__: true,
-      __VUE_PROD_DEVTOOLS__: false,
-    }
-    
-    return config
+  docs: {
+    autodocs: 'tag',
   },
-}
-export default config
+  viteFinal: async (config) => {
+    // Configurar Tailwind CSS no Storybook
+    config.css = {
+      postcss: {
+        plugins: [
+          require('tailwindcss'),
+          require('autoprefixer'),
+        ],
+      },
+    };
+    return config;
+  },
+};
+
+export default config;

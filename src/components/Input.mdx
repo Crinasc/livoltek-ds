@@ -1,0 +1,48 @@
+import { Meta, Story, Canvas, Controls, Description } from '@storybook/blocks';
+import Input from './Input';
+
+<Meta of={Input} />
+
+# Input
+
+Campo de entrada de texto do Design System Livoltek.
+
+## Características
+
+- Placeholder com cor neutra
+- Foco com borda azul
+- Transições suaves
+- Suporte a diferentes tipos de input
+
+## Tipos
+
+- **text**: Texto padrão
+- **password**: Senha (oculta caracteres)
+- **email**: Email com validação
+
+## Uso
+
+```jsx
+import Input from './Input';
+
+// Input básico
+<Input placeholder="Digite seu nome" />
+
+// Input de senha
+<Input type="password" placeholder="Digite sua senha" />
+
+// Input desabilitado
+<Input placeholder="Campo desabilitado" disabled />
+```
+
+## Props
+
+| Prop | Tipo | Padrão | Descrição |
+|------|------|--------|-----------|
+| type | string | 'text' | Tipo do input |
+| placeholder | string | - | Texto do placeholder |
+| value | string | - | Valor do input |
+| onChange | function | - | Função chamada ao alterar |
+| disabled | boolean | false | Se o input está desabilitado |
+
+<Canvas of={Story} />

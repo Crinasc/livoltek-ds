@@ -1,29 +1,23 @@
 # Livoltek Design System
 
-Um Design System moderno e acessível construído com Vue 3, Vite, Tailwind CSS e Storybook.
+Sistema de design da Livoltek construído com React, Tailwind CSS v4 e Storybook.
 
-## 🚀 Características
+## 🎨 Componentes
 
-- **Vue 3** com Composition API
-- **Tailwind CSS** para estilização
-- **Storybook** para documentação de componentes
-- **TypeScript** pronto para uso
-- **Acessibilidade** integrada
-- **Responsivo** por padrão
+- **Button** - Botões primários e secundários com estados hover
+- **Input** - Campos de entrada com estilos consistentes
+- **Login** - Página de login completa
 
-## 📦 Instalação
+## 🚀 Como usar
+
+### Instalação
 
 ```bash
-# Instalar dependências
 npm install
-
-# Instalar dependências de desenvolvimento
-npm install --save-dev
 ```
 
-## 🛠️ Scripts Disponíveis
-
 ### Desenvolvimento
+
 ```bash
 # Iniciar servidor de desenvolvimento
 npm run dev
@@ -32,123 +26,48 @@ npm run dev
 npm run storybook
 ```
 
-### Produção
+### Build
+
 ```bash
 # Build para produção
 npm run build
 
-# Preview do build
-npm run preview
+# Build do Storybook
+npm run build-storybook
 ```
 
-### Qualidade de Código
-```bash
-# Linting
-npm run lint
+## 📚 Documentação
 
-# Formatação
-npm run format
-```
-
-## 📚 Como Usar os Componentes
-
-### Importação
-```javascript
-import { Button } from 'livoltek-ds'
-
-// Ou importação individual
-import Button from 'livoltek-ds/src/components/Button.vue'
-```
-
-### Uso Básico
-```vue
-<template>
-  <Button 
-    label="Clique aqui" 
-    variant="primary" 
-    size="medium" 
-    @click="handleClick" 
-  />
-</template>
-
-<script setup>
-import { Button } from 'livoltek-ds'
-
-const handleClick = () => {
-  console.log('Button clicked!')
-}
-</script>
-```
-
-## 🎨 Componentes Disponíveis
-
-### Button
-Componente de botão com múltiplas variantes e tamanhos.
-
-**Props:**
-- `label` (String): Texto do botão
-- `variant` (String): 'primary' | 'secondary'
-- `size` (String): 'small' | 'medium' | 'large'
-- `disabled` (Boolean): Estado desabilitado
-
-**Exemplo:**
-```vue
-<Button 
-  label="Botão Primário" 
-  variant="primary" 
-  size="large" 
-/>
-```
-
-## 🎯 Storybook
-
-Acesse a documentação interativa dos componentes:
+Acesse a documentação completa no Storybook:
 
 ```bash
 npm run storybook
 ```
 
-Abra [http://localhost:6006](http://localhost:6006) no seu navegador.
+## 🎯 Design Tokens
 
-## 🏗️ Estrutura do Projeto
+### Cores
 
-```
-src/
-├── components/          # Componentes do Design System
-│   ├── Button.vue      # Componente Button
-│   └── Button.stories.js # Stories do Button
-├── assets/             # Recursos estáticos
-│   └── css/
-│       └── tailwind.css # Estilos Tailwind
-├── main.js             # Ponto de entrada
-└── index.js            # Exports dos componentes
-```
+- **Primary**: #6366f1 (azul principal)
+- **Secondary**: #ebebeb (cinza claro)
+- **Neutral**: Escala de cinzas de 50 a 900
 
-## 🎨 Design Tokens
+### Tipografia
 
-O Design System utiliza Tailwind CSS com configurações customizadas:
+- **Fonte**: Inter
+- **Tamanhos**: 16px base com escala responsiva
 
-- **Cores**: Paleta consistente e acessível
-- **Tipografia**: Escalas responsivas
-- **Espaçamento**: Sistema de grid 8px
-- **Bordas**: Raio consistente
-- **Sombras**: Elevação sutil
+### Espaçamento
 
-## 🤝 Contribuição
+- **Border Radius**: 4px, 8px, 12px, 16px
+- **Padding**: Sistema de espaçamento consistente
 
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+## 🔗 Links
 
-## 📄 Licença
+- [Figma Design](https://www.figma.com/design/axxySxvdMc6eGq9hEM7ilm/Livoltek-DS-V2)
+- [Storybook](http://localhost:6006)
+- [Zeroheight](https://zeroheight.com) (em breve)
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+## 📝 Licença
 
-## 🔗 Links Úteis
-
-- [Vue 3 Documentation](https://vuejs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Storybook](https://storybook.js.org/)
-- [Vite](https://vitejs.dev/)
+MIT

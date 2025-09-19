@@ -1,0 +1,49 @@
+import { Meta, Story, Canvas, Controls, Description } from '@storybook/blocks';
+import Button from './Button';
+
+<Meta of={Button} />
+
+# Button
+
+Componente de botão do Design System Livoltek com variantes primária e secundária.
+
+## Variantes
+
+### Primary
+Botão principal para ações importantes.
+
+### Secondary  
+Botão secundário para ações menos importantes.
+
+## Estados
+
+- **Default**: Estado padrão do botão
+- **Hover**: Estado quando o mouse está sobre o botão
+- **Disabled**: Estado desabilitado
+
+## Uso
+
+```jsx
+import Button from './Button';
+
+// Botão primário
+<Button variant="primary">Confirmar</Button>
+
+// Botão secundário
+<Button variant="secondary">Cancelar</Button>
+
+// Botão desabilitado
+<Button variant="primary" disabled>Desabilitado</Button>
+```
+
+## Props
+
+| Prop | Tipo | Padrão | Descrição |
+|------|------|--------|-----------|
+| variant | 'primary' \| 'secondary' | 'primary' | Variante do botão |
+| state | 'default' \| 'hover' | 'default' | Estado visual do botão |
+| disabled | boolean | false | Se o botão está desabilitado |
+| children | ReactNode | - | Conteúdo do botão |
+| onClick | function | - | Função chamada ao clicar |
+
+<Canvas of={Story} />

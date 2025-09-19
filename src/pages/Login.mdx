@@ -1,0 +1,42 @@
+import { Meta, Story, Canvas, Controls, Description } from '@storybook/blocks';
+import Login from './Login';
+
+<Meta of={Login} />
+
+# Login Page
+
+Página de login completa do Design System Livoltek.
+
+## Características
+
+- Design baseado no Figma
+- Formulário com validação
+- Campos de usuário e senha
+- Botão de confirmação
+- Layout responsivo
+
+## Estrutura
+
+- **Header**: Título "Login"
+- **Form**: Campos de entrada
+  - Username
+  - Password
+- **Actions**: Botão de confirmação
+
+## Uso
+
+```jsx
+import Login from './Login';
+
+// Página de login completa
+<Login />
+```
+
+## Design Tokens
+
+- **Background**: Overlay preto com 10% de opacidade
+- **Card**: Fundo branco com border radius de 16px
+- **Padding**: 40px interno
+- **Spacing**: 8px entre campos, 23px entre seções
+
+<Canvas of={Story} />
