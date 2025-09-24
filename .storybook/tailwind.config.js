@@ -31,12 +31,12 @@ module.exports = {
           800: '#262626',
           900: '#171717',
         },
-        button: {
-          primary: '#6366f1',
-          'primary-hover': '#4f46e5',
-          secondary: '#ebebeb',
-          'secondary-hover': '#d7d7d7',
-        }
+            button: {
+              primary: '#1d4ed8',
+              'primary-hover': '#1e40af',
+              secondary: '#ebebeb',
+              'secondary-hover': '#d7d7d7',
+            }
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

@@ -34,12 +34,16 @@ module.exports = {
           800: '#262626',
           900: '#171717',
         },
-        // Cores específicas dos botões
+        // Cores específicas dos botões baseadas no Figma
         button: {
-          primary: '#6366f1',
-          'primary-hover': '#4f46e5',
+          primary: '#1d4ed8', // colors/blue/700 do Figma
+          'primary-hover': '#1e40af', // versão mais escura
           secondary: '#ebebeb',
           'secondary-hover': '#d7d7d7',
+        },
+        // Cores do Figma
+        blue: {
+          700: '#1d4ed8',
         }
       },
       fontFamily: {
