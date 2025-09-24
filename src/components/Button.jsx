@@ -15,11 +15,11 @@ const Button = ({
   const baseClasses = 'inline-flex items-center justify-center rounded-md font-normal leading-6 tracking-[-0.5px] transition-colors duration-200';
   
   const sizeClasses = {
-    sm: 'px-3 py-2 text-sm font-semibold leading-5', // 14px, 20px line-height
-    md: 'px-3 py-2 text-sm font-semibold leading-5', // Baseado no Figma
-    lg: 'px-3 py-2 text-base font-semibold leading-6',
-    xl: 'px-3 py-2 text-lg font-semibold leading-7',
-    '2xl': 'px-3 py-2 text-xl font-semibold leading-8',
+    sm: 'h-6 px-3 text-sm font-semibold leading-5', // 24px height
+    md: 'h-7 px-3 text-sm font-semibold leading-5', // 28px height  
+    lg: 'h-8 px-3 text-sm font-semibold leading-5', // 32px height
+    xl: 'h-9 px-3 text-sm font-semibold leading-5', // 36px height
+    '2xl': 'h-10 px-3 text-sm font-semibold leading-5', // 40px height
   };
   
   const variantClasses = {

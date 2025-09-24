@@ -33,7 +33,7 @@ module.exports = {
         },
             button: {
               primary: '#1d4ed8',
-              'primary-hover': '#1e40af',
+              'primary-hover': '#2563eb',
               secondary: '#ebebeb',
               'secondary-hover': '#d7d7d7',
             }

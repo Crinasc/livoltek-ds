@@ -1,10 +1,7 @@
 import React from "react"
 import { Button } from "../components/Button"
 import figma from "@figma/code-connect"
-
-// Ícones simples para demonstração
-const CircleIcon = () => <span className="w-4 h-4 border-2 border-white rounded-full" />;
-const ChevronIcon = () => <span className="w-4 h-4 border-r-2 border-b-2 border-white rotate-45" />;
+import { Circle, ChevronDown } from 'lucide-react'
 
 /**
  * -- Code Connect para Button Component --
@@ -42,8 +39,8 @@ figma.connect(
         size={props.size}
         state={props.state}
         disabled={props.disabled}
-        iconLeft={props.iconLeft ? <CircleIcon /> : null}
-        iconRight={props.iconRight ? <ChevronIcon /> : null}
+        iconLeft={props.iconLeft ? <Circle className="w-4 h-4" /> : null}
+        iconRight={props.iconRight ? <ChevronDown className="w-4 h-4" /> : null}
       >
         {props.children || "Button"}
       </Button>
