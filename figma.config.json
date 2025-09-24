@@ -1,0 +1,13 @@
+{
+  "name": "Livoltek Design System",
+  "repository": "https://github.com/Crinasc/livoltek-ds",
+  "clientId": "TQBBCRoLtwqjdgXcUDb1wa",
+  "clientSecret": "h8jOJFY5kgPVBvmPrkFft7L6xjPmAf",
+  "documentUrlSubstitutions": {
+    "https://www.figma.com/design/axxySxvdMc6eGq9hEM7ilm/Livoltek-DS-V2": "https://www.figma.com/design/axxySxvdMc6eGq9hEM7ilm/Livoltek-DS-V2"
+  },
+  "codeConnect": {
+    "source": "./src/components",
+    "output": "./src/figma"
+  }
+}

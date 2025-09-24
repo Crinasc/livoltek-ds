@@ -12,7 +12,12 @@
     "build-storybook": "storybook build",
     "test": "vitest"
   },
-  "keywords": ["design-system", "livoltek", "tailwind", "storybook"],
+  "keywords": [
+    "design-system",
+    "livoltek",
+    "tailwind",
+    "storybook"
+  ],
   "author": "Livoltek",
   "license": "MIT",
   "devDependencies": {
@@ -34,6 +39,7 @@
     "vitest": "^0.34.0"
   },
   "dependencies": {
+    "@figma/code-connect": "^1.3.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
