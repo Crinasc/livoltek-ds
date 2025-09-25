@@ -1,4 +1,5 @@
 import React from 'react';
+import { Circle, ChevronDown } from 'lucide-react';
 
 const Button = ({ 
   variant = 'primary', 
@@ -8,8 +9,10 @@ const Button = ({
   onClick,
   disabled = false,
   className = '',
-  iconLeft = null,
-  iconRight = null,
+  leadingIcon = null,
+  trailingIcon = null,
+  // Propriedades adicionais seguindo padrões Tailwind
+  type = 'button',
   ...props 
 }) => {
   const baseClasses = 'inline-flex items-center justify-center rounded-md font-normal leading-6 tracking-[-0.5px] transition-colors duration-200';
@@ -26,10 +29,6 @@ const Button = ({
     primary: {
       default: 'bg-button-primary text-white hover:bg-button-primary-hover',
       hover: 'bg-button-primary-hover text-white',
-    },
-    secondary: {
-      default: 'bg-button-secondary text-black hover:bg-button-secondary-hover',
-      hover: 'bg-button-secondary-hover text-black',
     }
   };
 
@@ -40,16 +39,23 @@ const Button = ({
   
   const combinedClasses = `${baseClasses} ${sizeClass} ${stateClasses} ${disabledClasses} ${className}`.trim();
 
+  // Determinar quais ícones renderizar
+  // Regra: botões sm e md não devem ter ícones
+  const shouldShowIcons = !['sm', 'md'].includes(size);
+  const leftIcon = shouldShowIcons && leadingIcon === true ? <Circle className="w-4 h-4" /> : (shouldShowIcons ? leadingIcon : null);
+  const rightIcon = shouldShowIcons && trailingIcon === true ? <ChevronDown className="w-4 h-4" /> : (shouldShowIcons ? trailingIcon : null);
+
   return (
     <button
+      type={type}
       className={combinedClasses}
       onClick={onClick}
       disabled={disabled}
       {...props}
     >
-      {iconLeft && <span className="mr-2">{iconLeft}</span>}
+      {leftIcon && <span className="mr-2">{leftIcon}</span>}
       {children}
-      {iconRight && <span className="ml-2">{iconRight}</span>}
+      {rightIcon && <span className="ml-2">{rightIcon}</span>}
     </button>
   );
 };

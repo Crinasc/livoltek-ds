@@ -10,7 +10,9 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "vitest"
+    "test": "vitest",
+    "code-connect": "npx @figma/code-connect connect",
+    "code-connect:build": "npx @figma/code-connect connect --build"
   },
   "keywords": [
     "design-system",

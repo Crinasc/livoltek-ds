@@ -15,7 +15,6 @@ figma.connect(
     props: {
       variant: figma.enum("Type", {
         Primary: "primary",
-        Secondary: "secondary",
       }),
       size: figma.enum("Size", {
         sm: "sm",
@@ -28,9 +27,14 @@ figma.connect(
         Default: "default",
         Hover: "hover",
       }),
-      iconLeft: figma.boolean("icon_left"),
-      iconRight: figma.boolean("icon_right"),
+      leadingIcon: figma.boolean("leading_icon"),
+      trailingIcon: figma.boolean("trailing_icon"),
       disabled: figma.boolean("Disabled"),
+      type: figma.enum("Button Type", {
+        Button: "button",
+        Submit: "submit",
+        Reset: "reset",
+      }),
       children: figma.string("Button Text"),
     },
     example: (props) => (
@@ -39,8 +43,9 @@ figma.connect(
         size={props.size}
         state={props.state}
         disabled={props.disabled}
-        iconLeft={props.iconLeft ? <Circle className="w-4 h-4" /> : null}
-        iconRight={props.iconRight ? <ChevronDown className="w-4 h-4" /> : null}
+        type={props.type}
+        leadingIcon={props.leadingIcon ? <Circle className="w-4 h-4" /> : null}
+        trailingIcon={props.trailingIcon ? <ChevronDown className="w-4 h-4" /> : null}
       >
         {props.children || "Button"}
       </Button>
