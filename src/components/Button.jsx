@@ -29,6 +29,10 @@ const Button = ({
     primary: {
       default: 'bg-button-primary text-white hover:bg-button-primary-hover',
       hover: 'bg-button-primary-hover text-white',
+    },
+    secondary: {
+      default: 'bg-gray-200 text-gray-800 hover:bg-gray-300',
+      hover: 'bg-gray-300 text-gray-800',
     }
   };
 

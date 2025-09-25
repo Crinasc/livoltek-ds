@@ -15,8 +15,8 @@ export default {
   argTypes: {
     variant: {
       control: { type: 'select' },
-      options: ['primary'],
-      description: 'Variante visual do botão (apenas primary conforme Figma)',
+      options: ['primary', 'secondary'],
+      description: 'Variante visual do botão (primary/secondary conforme Figma)',
     },
     state: {
       control: { type: 'select' },
@@ -138,4 +138,25 @@ export const Interactive = {
     leadingIcon: false,
     trailingIcon: false,
   },
+};
+
+// Story para testar todas as variantes do Figma
+export const AllVariants = {
+  args: {
+    variant: 'primary',
+    state: 'default',
+    size: 'lg',
+    children: 'Button',
+    disabled: false,
+    leadingIcon: false,
+    trailingIcon: false,
+  },
+  render: (args) => (
+    <div className="space-y-4">
+      <div className="space-x-2 flex items-center">
+        <Button {...args} variant="primary">Primary</Button>
+        <Button {...args} variant="secondary">Secondary</Button>
+      </div>
+    </div>
+  ),
 };
