@@ -13,7 +13,7 @@
     "test": "vitest",
     "code-connect": "npx @figma/code-connect connect",
     "code-connect:build": "npx @figma/code-connect connect --build",
-    "sync:figma": "echo 'Sincronizando tokens do Figma...' && mkdir -p src/tokens && echo '{\"colors\": {}, \"typography\": {}, \"spacing\": {}, \"borderRadius\": {}}' > src/tokens/design-tokens.json",
+    "sync:figma": "echo Sincronizando tokens do Figma... && if not exist src\\tokens mkdir src\\tokens && echo {\"colors\": {}, \"typography\": {}, \"spacing\": {}, \"borderRadius\": {}} > src\\tokens\\design-tokens.json",
     "sync:all": "npm run sync:figma && npm run build-storybook",
     "prestorybook": "npm run sync:figma",
     "chromatic": "chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
@@ -47,6 +47,7 @@
   },
   "dependencies": {
     "@figma/code-connect": "^1.3.5",
+    "dotenv": "^17.2.2",
     "lucide-react": "^0.544.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
