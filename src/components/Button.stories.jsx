@@ -161,3 +161,43 @@ export const AllVariants = {
     </div>
   ),
 };
+
+// Story específica do Figma - Botão Primary com ícones (node 340:31377)
+export const FigmaPrimaryWithIcons = {
+  args: {
+    variant: 'primary',
+    state: 'default',
+    size: '2xl', // Usando 2xl como no Figma
+    children: 'Button',
+    disabled: false,
+    leadingIcon: true,
+    trailingIcon: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Botão Primary exato do Figma (node 340:31377) com ícones leading e trailing.',
+      },
+    },
+  },
+};
+
+// Story específica do Figma - Botão Primary Disabled (node 355:281)
+export const FigmaPrimaryDisabled = {
+  args: {
+    variant: 'primary',
+    state: 'disabled',
+    size: '2xl', // Usando 2xl como no Figma
+    children: 'Button',
+    disabled: true,
+    leadingIcon: true,
+    trailingIcon: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Botão Primary Disabled exato do Figma (node 355:281) com cores neutral-200 e neutral-400.',
+      },
+    },
+  },
+};

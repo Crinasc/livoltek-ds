@@ -17,21 +17,21 @@ const Button = ({
   type = 'button',
   ...props 
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center rounded-md font-normal leading-6 tracking-[-0.5px] transition-colors duration-200';
+  const baseClasses = 'inline-flex items-center justify-center rounded-[6px] font-normal leading-6 tracking-[-0.5px] transition-colors duration-200'; // Exato do Figma: 6px
   
   const sizeClasses = {
     sm: 'h-6 px-3 text-sm font-semibold leading-5', // 24px height
     md: 'h-7 px-3 text-sm font-semibold leading-5', // 28px height  
     lg: 'h-8 px-3 text-sm font-semibold leading-5', // 32px height
     xl: 'h-9 px-3 text-sm font-semibold leading-5', // 36px height
-    '2xl': 'h-10 px-3 text-sm font-semibold leading-5', // 40px height
+    '2xl': 'h-10 px-[14px] py-[10px] text-sm font-semibold leading-5', // 40px height - exato do Figma
   };
   
   const variantClasses = {
     primary: {
-      default: 'bg-button-primary text-white hover:bg-button-primary-hover',
-      hover: 'bg-button-primary-hover text-white',
-      disabled: 'bg-neutral-200 text-neutral-400 cursor-not-allowed',
+      default: 'bg-blue-700 text-white hover:bg-blue-800', // Exato do Figma: #1d4ed8
+      hover: 'bg-blue-800 text-white',
+      disabled: 'bg-neutral-200 text-neutral-400 cursor-not-allowed', // Exato do Figma: #e5e5e5 e #a3a3a3
     },
     secondary: {
       default: 'bg-gray-200 text-gray-800 hover:bg-gray-300',
@@ -66,9 +66,9 @@ const Button = ({
       disabled={disabled}
       {...props}
     >
-      {leftIcon && <span className="mr-2">{leftIcon}</span>}
+      {leftIcon && <span className="mr-[8px]">{leftIcon}</span>} {/* Exato do Figma: 8px gap */}
       {children}
-      {rightIcon && <span className="ml-2">{rightIcon}</span>}
+      {rightIcon && <span className="ml-[8px]">{rightIcon}</span>} {/* Exato do Figma: 8px gap */}
     </button>
   );
 };
