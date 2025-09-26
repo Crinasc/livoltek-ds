@@ -29,25 +29,32 @@ const Button = ({
     primary: {
       default: 'bg-button-primary text-white hover:bg-button-primary-hover',
       hover: 'bg-button-primary-hover text-white',
+      disabled: 'bg-neutral-200 text-neutral-400 cursor-not-allowed',
     },
     secondary: {
       default: 'bg-gray-200 text-gray-800 hover:bg-gray-300',
       hover: 'bg-gray-300 text-gray-800',
+      disabled: 'bg-neutral-200 text-neutral-400 cursor-not-allowed',
     }
   };
 
-  const stateClasses = variantClasses[variant]?.[state] || variantClasses[variant].default;
+  // Determinar o estado correto (disabled tem prioridade sobre hover)
+  const currentState = disabled ? 'disabled' : state;
+  const stateClasses = variantClasses[variant]?.[currentState] || variantClasses[variant].default;
   const sizeClass = sizeClasses[size] || sizeClasses.md;
   
-  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer';
+  const disabledClasses = disabled ? '' : 'cursor-pointer';
   
   const combinedClasses = `${baseClasses} ${sizeClass} ${stateClasses} ${disabledClasses} ${className}`.trim();
 
-  // Determinar quais ícones renderizar
-  // Regra: botões sm e md não devem ter ícones
+  // Determinar se deve mostrar ícones baseado no Figma
+  // No Figma: apenas botões lg+ têm ícones, e apenas iconOnly=true
   const shouldShowIcons = !['sm', 'md'].includes(size);
-  const leftIcon = shouldShowIcons && leadingIcon === true ? <Circle className="w-4 h-4" /> : (shouldShowIcons ? leadingIcon : null);
-  const rightIcon = shouldShowIcons && trailingIcon === true ? <ChevronDown className="w-4 h-4" /> : (shouldShowIcons ? trailingIcon : null);
+  
+  // Se leadingIcon ou trailingIcon for true, renderizar ícones
+  // Se for um elemento React, usar diretamente
+  const leftIcon = shouldShowIcons && leadingIcon === true ? <Circle className="w-4 h-4 text-white" /> : (shouldShowIcons && leadingIcon ? leadingIcon : null);
+  const rightIcon = shouldShowIcons && trailingIcon === true ? <ChevronDown className="w-4 h-4 text-white" /> : (shouldShowIcons && trailingIcon ? trailingIcon : null);
 
   return (
     <button

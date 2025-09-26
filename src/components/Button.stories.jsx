@@ -20,7 +20,7 @@ export default {
     },
     state: {
       control: { type: 'select' },
-      options: ['default', 'hover'],
+      options: ['default', 'hover', 'disabled'],
       description: 'Estado visual do botão',
     },
     size: {
@@ -109,6 +109,7 @@ export const AllStates = {
       <div className="space-x-2">
         <Button {...args} state="default">Default</Button>
         <Button {...args} state="hover">Hover</Button>
+        <Button {...args} state="disabled" disabled={true}>Disabled</Button>
       </div>
     </div>
   ),
