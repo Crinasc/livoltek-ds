@@ -65,7 +65,8 @@ npm run storybook
 ## 🔗 Links
 
 - [Figma Design](https://www.figma.com/design/axxySxvdMc6eGq9hEM7ilm/Livoltek-DS-V2)
-- [Storybook](http://localhost:6006)
+- [Storybook Local](http://localhost:6006) (desenvolvimento)
+- [Storybook Produção](https://68c478ae1e62f138d3e60bc8-atytcouikl.chromatic.com/) (deploy automático)
 - [Zeroheight](https://zeroheight.com) (em breve)
 
 ## 📝 Licença
