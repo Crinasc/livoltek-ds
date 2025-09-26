@@ -9,5 +9,17 @@
   "codeConnect": {
     "source": "./src/components",
     "output": "./src/figma"
-  }
+  },
+  "include": [
+    "src/figma/**/*.tsx"
+  ],
+  "exclude": [
+    "src/figma/Input.figma.tsx"
+  ],
+  "scopes": [
+    "file_content:read",
+    "file_metadata:read",
+    "file_dev_resources:write",
+    "library_content:read"
+  ]
 }
