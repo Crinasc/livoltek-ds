@@ -1,6 +1,8 @@
 import React from 'react';
 import { Circle, ChevronDown } from 'lucide-react';
 
+// Componente Button atualizado para sincronizar com Netlify
+
 const Button = ({ 
   variant = 'primary', 
   state = 'default',
