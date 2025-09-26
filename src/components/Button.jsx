@@ -53,8 +53,8 @@ const Button = ({
   
   // Se leadingIcon ou trailingIcon for true, renderizar ícones
   // Se for um elemento React, usar diretamente
-  const leftIcon = shouldShowIcons && leadingIcon === true ? <Circle className="w-4 h-4 text-white" /> : (shouldShowIcons && leadingIcon ? leadingIcon : null);
-  const rightIcon = shouldShowIcons && trailingIcon === true ? <ChevronDown className="w-4 h-4 text-white" /> : (shouldShowIcons && trailingIcon ? trailingIcon : null);
+  const leftIcon = shouldShowIcons && leadingIcon === true ? <Circle className="w-4 h-4 text-white" /> : (shouldShowIcons && leadingIcon && leadingIcon !== true ? leadingIcon : null);
+  const rightIcon = shouldShowIcons && trailingIcon === true ? <ChevronDown className="w-4 h-4 text-white" /> : (shouldShowIcons && trailingIcon && trailingIcon !== true ? trailingIcon : null);
 
   return (
     <button
