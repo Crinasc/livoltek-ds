@@ -12,7 +12,8 @@
     "build-storybook": "storybook build",
     "test": "vitest",
     "code-connect": "npx @figma/code-connect connect",
-    "code-connect:build": "npx @figma/code-connect connect --build"
+    "code-connect:build": "npx @figma/code-connect connect --build",
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "keywords": [
     "design-system",
@@ -34,6 +35,7 @@
     "@types/react-dom": "^18.2.0",
     "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.0",
+    "chromatic": "^13.2.0",
     "postcss": "^8.4.0",
     "storybook": "^7.6.0",
     "tailwindcss": "^3.4.0",
